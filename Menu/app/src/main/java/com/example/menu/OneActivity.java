@@ -6,9 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 public class OneActivity extends AppCompatActivity {
     private Button bt_cancel;
+    private ImageView img_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +27,8 @@ public class OneActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        img_2 = findViewById(R.id.img2);
+        Glide.with(this).load("https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png").into(img_2);
     }
 }
